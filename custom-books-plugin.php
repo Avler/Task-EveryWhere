@@ -11,7 +11,6 @@ function custom_books_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'custom_books_enqueue_styles');
 
-
 function custom_books_enqueue_scripts() {
     if (is_post_type_archive('books') || is_singular('books')) {
         wp_enqueue_script('custom-books-script', plugin_dir_url(__FILE__) . 'js/script.js', array(), false, true);
@@ -35,7 +34,6 @@ function handle_add_book_form() {
         wp_die('Nie masz uprawnień do wykonania tej operacji');
     }
  
-
     $title = sanitize_text_field($_POST['book_title']);
     $author = sanitize_text_field($_POST['book_author']);
     $year = intval($_POST['book_year']);
@@ -102,7 +100,6 @@ function custom_books_filter($query) {
 }
 add_action('pre_get_posts', 'custom_books_filter');
 
-
 function custom_books_template_include($template) {
     if (is_singular('books')) {
         $new_template = plugin_dir_path(__FILE__) . 'templates/single-books.php';
@@ -118,4 +115,3 @@ function custom_books_template_include($template) {
     return $template;
 }
 add_filter('template_include', 'custom_books_template_include');
-

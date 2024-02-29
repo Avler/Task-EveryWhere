@@ -2,7 +2,7 @@
 
 <div class="flex flex-col items-center justify-center my-10">
     <a href="<?php echo get_post_type_archive_link('books'); ?>" class="mt-4 text-indigo-600 hover:text-indigo-800 transition duration-300 hover:text-indigo-600">
-    <button id="backBookButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button id="backBookButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-10 rounded">
     Powrót do archiwum książek
         </button> 
     </a>
